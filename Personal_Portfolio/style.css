@@ -1,0 +1,724 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior:smooth;
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #9747FF;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9747FF;
+}
+/* navbar styling */
+nav{
+  position: absolute;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+ 
+}
+/* nav.sticky{
+  background: hsl(280, 100%, 97%);
+  padding: 13px 0;
+} */
+nav .navbar{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+nav .navbar .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color: #fff;
+}
+/* nav.sticky .navbar .logo a{
+  color: #9747FF;
+} */
+nav .navbar .menu{
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 8px;
+}
+.navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+  color: #9747FF;
+}
+/* nav.sticky .menu a{
+  color: #9747FF;
+} */
+/* nav.sticky .menu a:hover{
+  color: #0E2431;
+} */
+.navbar .media-icons a{
+  color: #fff;
+  font-size: 18px;
+  margin: 0 6px;
+}
+/* nav.sticky .media-icons a{
+  color: #9747FF;
+} */
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+  position: absolute;
+  color: #9747FF;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn{
+  color: #fff;
+}
+nav.sticky .menu-btn{
+  color: #9747FF;
+}
+.navbar .menu .menu-btn{
+  color: #fff;
+}
+
+/* home section styling */
+
+.home{
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+  .home img{
+    float: right;
+    width: 50%;
+    height: 100%;
+  }
+  
+.home .home-content{
+  width: 90%;
+  margin-top: 15%;
+  margin-left: 5%;
+  /*display: flex;*/
+  /* flex-direction: column;
+  justify-content: center; */
+}
+.home .text-one{
+  font-size: 45px;
+  color: #0E2431;
+}
+.home .text-two{
+  color: #0E2431;
+  font-size: 85px;
+  font-weight: 600;
+  /* margin-left: -3px; */
+}
+.home .text-three{
+  font-size: 60px;
+  margin: 5px 0;
+  color: #fff;
+
+}
+
+.typing{
+  color:#9747FF;
+  font-weight: 900;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.964);
+}
+
+.home .button{
+  margin: 14px 0;
+}
+.home .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #9747FF;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  
+}
+.home .button button:hover{
+  border-color: #9747FF;
+  background-color: hsl(280, 100%, 97%);
+  color: #9747FF;
+}
+
+.background-clip{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 100%;
+}
+
+@media (min-aspect-ratio:16/9){
+.background-clip{
+  width: 100%;
+  height: auto;
+}
+}
+
+@media (max-aspect-ratio:16/9){
+  .background-clip{
+    width: auto;
+    height: 100%;
+    
+  }
+}
+
+/* About Section Styling */
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+section{
+  padding-top: 40px;
+}
+section .content{
+  width: 80%;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+.bio .bio-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .title{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  
+}
+section .title span{
+  color: #0E2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #9747FF;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after{
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bio .bio-details .left{
+  width: 45%;
+}
+.bio .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.bio-details .right{
+  width: 55%;
+}
+section  .topic{
+  color: #0E2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+section  .topic a{
+  color: #0E2431;
+  text-decoration: none;
+  
+}
+
+
+.bio-details .right p{
+  text-align: justify;
+  color: #0E2431;
+}
+section .button{
+  margin: 16px 0;
+}
+section .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #9747FF;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover{
+    border-color: #9747FF;
+    background-color: hsl(280, 100%, 97%);
+    color: #9747FF;
+}
+
+ /* My Skills CSS */
+ .skills{
+  background: url("images/gradient-smooth-background.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment:scroll;  */
+  background-size: 100% 100%;
+ }
+ .skills .content{
+   padding: 40px 0;
+ }
+ .skills .skills-details{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap:30px;
+ }
+ .skills-details .text{
+   width: 50%;
+ }
+ .skills-details p{
+   color: #0E2431;
+   text-align: justify;
+ }
+.skills .skills-details .experience{
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.skills-details .experience .num{
+  color: #0E2431;
+  font-size: 80px;
+}
+.skills-details .experience .exp{
+  color: #0E2431;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+.skills-details .boxes{
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box{
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic{
+  font-size: 18px;
+  color: #fff;
+}
+.skills-details .boxes .per{
+  font-size: 40px;
+  color: #fff;
+}
+
+/*My experiences CSS */
+
+.experiences .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.experiences .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+ 
+  background-size: cover;
+}
+.experiences .boxes .box:hover{
+  background: #9747FF;
+  color: #fff;
+}
+.experiences .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #9747FF;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+  background-color: #fff;
+  color: #9747FF;
+}
+.experiences .boxes .box:hover .topic,
+.experiences .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+.experiences .boxes .box:hover .topic,
+.experiences .boxes .box:hover p{
+  color: #fff;
+}
+
+/* Contact Me CSS */
+.contact{
+  background: url("images/gradient-smooth-background.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment:scroll;  */
+  background-size: 100% 100%;
+
+}
+.contact .content{
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.contact input{
+  width: 350px;
+  height: 33px;
+  padding-left: 5px;
+  margin-bottom: 8px;
+ border-radius: 5px;
+  border: solid 1px #9747FF;
+
+}
+
+#message{
+  padding-left: 5px;
+  border: solid 1px #9747FF;
+  width: 350px;
+  height:150px;
+  border-radius: 3px;
+}
+
+form button{
+ 
+    margin: 16px 0;
+  }
+  form .button button{
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    background: #9747FF;
+    color: #fff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    width: 150px;
+    font-size: 16px;
+  }
+
+  form .button button:hover{
+      border-color: #9747FF;
+      background-color: hsl(280, 100%, 97%);
+      color: #9747FF;
+  }
+
+.contact .text{
+  width: 80%;
+  text-align: center;
+  margin: auto;
+
+}
+        
+
+/* Footer CSS */
+footer{
+  background: #9747FF;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+footer .text span a{
+  font-weight: 500;
+  color: #FFF;
+}
+footer .text span a:hover{
+  text-decoration: underline;
+}
+/* Scroll TO Top Button CSS */
+.scroll-button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #9747FF;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content{
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .bio .bio-details{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .bio .bio-details .left{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .bio-details .right{
+    width: 90%;
+    margin: 40px 0;
+  }
+  .experiences .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .bio .left img{
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  nav .navbar{
+    width: 90%;
+  }
+  nav .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: hsl(280, 100%, 97%);
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+    
+  }
+
+  .contact .boxes .box{
+  
+    width: auto;
+    text-align: center;
+    cursor: default;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .experiences .boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+
+  .experiences .boxes .box1{
+    margin: 20px 0;
+   width: 400px;
+   height: auto;
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: default;
+    transition: all 0.4s ease;
+   
+  }
+
+  .experiences .boxes .box2{
+    margin: 20px 0;
+   width: 400px;
+   height: auto;
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: default;
+    transition: all 0.4s ease;
+   
+  }
+
+  .experiences .boxes .box3{
+    margin: 20px 0;
+   width: 400px;
+   height: auto;
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: default;
+    transition: all 0.4s ease;
+   
+  }
+
+  .experiences .boxes .box4{
+    margin: 20px 0;
+   width: 400px;
+   height: auto;
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: default;
+    transition: all 0.4s ease;
+   
+  }
+
+  .experiences .boxes .box5{
+    margin: 20px 0;
+   width: 400px;
+   height: auto;
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: default;
+    transition: all 0.4s ease;
+   
+  }
+
+  .experiences .boxes .box6{
+    margin: 20px 0;
+   width: 400px;
+   height: auto;
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: default;
+    transition: all 0.4s ease;
+   
+  }
+
+  .navbar.active .menu{
+    left: 0;
+  }
+  nav .navbar .menu a{
+    font-size: 23px;
+    display: block;
+    color: #9747FF;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover{
+    color: #9747FF;
+  }
+  nav .navbar .media-icons{
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+    display: block;
+  }
+  .home .text-two{
+    font-size: 65px;
+  }
+  .home .text-three{
+    font-size: 35px;
+  }
+  .skills .skills-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .experiences .boxes .box{
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text{
+    width: 100%;
+}
+}
+
+@media (max-width: 500px){
+  .home .text-two{
+    font-size: 55px;
+  }
+  .home .text-three{
+    font-size: 33px;
+  }
+  .skills-details .boxes .per{
+    font-size: 50px;
+    color: #9747FF;
+  }
+    .background-clip{
+      
+      background-size:cover;
+     
+    
+  }
+}
+
